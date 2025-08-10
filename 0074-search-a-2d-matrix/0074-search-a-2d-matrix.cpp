@@ -26,9 +26,6 @@ public:
             if(matrix[i][0] <= target && matrix[i][m-1] >= target){
                 return binary_search(matrix[i], m, target);
             }
-            else{
-                continue;
-            }
         }
         return false;
     }
