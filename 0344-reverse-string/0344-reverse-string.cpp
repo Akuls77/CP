@@ -8,9 +8,5 @@ public:
             st++;
             end--;
         }
-        for(char ch: s){
-            cout<<ch<<" ";
-        }
-        cout<<endl;
     }
 };
