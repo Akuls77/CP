@@ -1,30 +1,25 @@
 class Solution {
 public:
-    bool isPalindrome(string s) {
-        if(s.length()<=1)
-        {
+    bool isAlphaNum(char ch){
+        if( (ch>='0' && ch<='9') || (tolower(ch)>='a' && tolower(ch)<='z')){
             return true;
         }
+        return false;
+    }
 
-        int st=0;
-        int end=s.length()-1;
-
-        while(st<end)
-        {
-            if(!isalnum(s[st]))
-            {
+    bool isPalindrome(string s) {
+        int n = s.length();
+        int st = 0, end = n-1;
+        while(st <= end){
+            if(!isAlphaNum(s[st])){
                 st++;
                 continue;
             }
-
-            if(!isalnum(s[end]))
-            {
+            if(!isAlphaNum(s[end])){
                 end--;
                 continue;
             }
-
-            if(tolower(s[st]) != tolower(s[end]))
-            {
+            if(tolower(s[st]) != tolower(s[end])){
                 return false;
             }
             st++;
