@@ -10,10 +10,7 @@ public:
                 i++;
                 cnt++;
             }
-            string str = to_string(cnt);
-            for(char digit: str){
-                comp += digit;
-            } 
+            comp.push_back('0'+cnt);
             comp += ch;
             i--;   //it cancels out the extra increment from the for loop
         }
