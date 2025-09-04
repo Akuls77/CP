@@ -12,7 +12,7 @@ public:
 
         // return s==t;
 
-        int freq[26] = {0};
+        vector <int> freq(26, 0);
         for(int i=0; i<n; i++){
             freq[s[i] - 'a']++;
         }
